@@ -15,11 +15,13 @@
  */
 
 header {
+	background-color: white;
 	font-family: Georgia;
 	font-size: 40px;
 }
 
 body {
+	background-color: #FFFFFA;
 	font-family: Verdana;
 	text-align: center;
 }
