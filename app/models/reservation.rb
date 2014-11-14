@@ -1,7 +1,7 @@
 class Reservation < ActiveRecord::Base
 	belongs_to :restaurant 
 
-	validates :availibility
+	validate :availibility
 
 	private
 	def availibilty # need to write a test for this aswell
