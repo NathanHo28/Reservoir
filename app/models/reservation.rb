@@ -1,10 +1,11 @@
 class Reservation < ActiveRecord::Base
 	belongs_to :restaurant 
+	belongs_to :user
 
-	validates :availibility
+	validate :availability
 
 	private
-	def availibilty # need to write a test for this aswell
+	def availability # need to write a test for this aswell
 		unless restaurant.available?(party_size, time)
 			errors.add(:base, "No restaurant for you!")
 		end
