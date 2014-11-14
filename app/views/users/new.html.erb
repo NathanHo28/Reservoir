@@ -3,7 +3,7 @@
 <%= form_for @user do |u| %>
 	<% if @user.errors.any? %>
 	<!-- .any? returns true if @user.errors isn't emtpy -->
-		<div class="errors">
+		<div class="error">
 			<h2>Invalid form</h2>
 			<ul>
 				<% for message in @user.errors.full_messages %>
