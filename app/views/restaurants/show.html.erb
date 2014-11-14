@@ -1,2 +1,12 @@
-<h1>Restaurants#show</h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
+<h1><strong><%= @restaurant.name %></strong></h1>
+<div>
+	  	<ul>
+	  		<li><%= restaurant.location%></li>
+		  	<li><%= restaurant.email %></li>
+		  	<li><%= restaurant.capacity %></li>
+		  	<li><%= restaurant.menu %></li>
+	  	</ul>
+	  <p><%= link_to "Back to Restaurants",restaurants_url%></p>
+</div>
+
+	  	
