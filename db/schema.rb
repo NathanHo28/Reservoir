@@ -11,22 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20141114181830) do
+ActiveRecord::Schema.define(version: 20141114193758) do
 
   create_table "restaurants", force: true do |t|
     t.string   "name"
     t.string   "email"
     t.integer  "capacity"
     t.string   "menu"
-=======
-ActiveRecord::Schema.define(version: 20141114180938) do
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "location"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
     t.string   "password_digest"
->>>>>>> 3c94d2efe94e14fbfd2649c959a90158fd8523d7
     t.datetime "created_at"
     t.datetime "updated_at"
   end
