@@ -20,16 +20,18 @@ ActiveRecord::Schema.define(version: 20141114181949) do
     t.string   "name"
     t.string   "email"
     t.string   "request"
-
-ActiveRecord::Schema.define(version: 20141114181830) do
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "restaurants", force: true do |t|
     t.string   "name"
     t.string   "email"
     t.integer  "capacity"
     t.string   "menu"
-
-ActiveRecord::Schema.define(version: 20141114180938) do
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"
