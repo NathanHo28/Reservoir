@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+header {
+	font-family: Georgia;
+	font-size: 40px;
+}
+
+body {
+	font-family: Verdana;
+	text-align: center;
+}
+
+.field {
+	font-size: 12px;
+
+}
