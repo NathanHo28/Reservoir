@@ -1,2 +1,20 @@
-<h1>Reservations#show</h1>
-<p>Find me in app/views/reservations/show.html.erb</p>
+<p> <%= @reservation.name %>, <%= @reservation.restaurant_id %>, <%= @reservation.time %>, <%= @reservation.party_size %></p>
+
+<% if current_user #does this sync correctly?%> 
+
+	<h3>Reservations</h3>
+
+	<p>Reservations for <%= @reservation.name %></p>
+
+	<% @reservation.restaurants.each do |restaurant| %>
+
+		<p>
+			<%= @reservation.time %>
+			<br>
+			<% if restaurant.user != nil %>
+			<em> booked by <%= reservation.user.name %></em>
+			Reservation date: <%= reservation.created_at #??? should this have been implemented in schema???%> 
+			<% end %>
+		</p>
+	<% end %>
+<% end %>

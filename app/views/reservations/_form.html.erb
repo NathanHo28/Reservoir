@@ -14,15 +14,11 @@
 <%= form_for(@reservation) do |f| %>
   <div class="field">
     <%= f.label :time %><br />
-    <%= f.date_time :time %>
+    <%= f.datetime_field :time %>
   </div>
   <div class="field">
     <%= f.label :party_size %><br />
     <%= f.number_field :party_size %>
-  </div>
-  <div class="field">
-    <%= f.label :restaurant_id %><br />
-    <%= f.number_field :restaurant_id %>
   </div>
   <div class="field">
     <%= f.label :name %><br />
