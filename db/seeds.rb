@@ -6,6 +6,15 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+#this is the test user
+User.create!(
+	:name => "Test",
+	:email => 'test@gmail.com'
+	:password => "test"
+	:password_confirmation => "test"
+
+	)
+
 Restaurant.create!(
 	:name => "Copacabana Grilled Brazilian - Rodizio Steakhouse",
 	:email => "copacabana@gmail.com",
