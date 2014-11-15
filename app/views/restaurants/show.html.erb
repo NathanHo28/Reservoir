@@ -1,10 +1,10 @@
 <h1><strong><%= @restaurant.name %></strong></h1>
 <div>
 	  	<ul>
-	  		<li><%= @restaurant.location%></li>
-		  	<li><%= @restaurant.email %></li>
-		  	<li><%= @restaurant.capacity %></li>
-		  	<li><%= @restaurant.menu %></li>
+	  		<li>Located @ <%= @restaurant.location%></li>
+		  	<li>Contact us: <%= @restaurant.email %></li>
+		  	<li>Capacity: <%= @restaurant.capacity %></li>
+		  	<li>Menu: <%= @restaurant.menu %></li>
 	  	</ul>
 	  <p><%= link_to "Back to Restaurants",restaurants_url%></p>
 </div>
