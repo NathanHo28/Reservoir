@@ -10,11 +10,10 @@ class UsersController < ApplicationController
   	else
   		render "new"
   	end
-
-  	private
-  	def user_params
-  		params.require(:user).permit(:email, :password, :password_confirmation)
-  	end
-  	
   end
+
+	private
+	def user_params
+		params.require(:user).permit(:email, :password, :password_confirmation)
+	end
 end
