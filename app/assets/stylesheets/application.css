@@ -15,16 +15,18 @@
  */
 
 header {
+	background-color: white;
 	font-family: Georgia;
 	font-size: 40px;
 }
 
 body {
-	font-family: Verdana;
+	background-color: #FFFFFA;
+	font-family: Georgia;
 	text-align: center;
 }
 
 .field {
-	font-size: 12px;
+	font-size: 14px;
 
 }
