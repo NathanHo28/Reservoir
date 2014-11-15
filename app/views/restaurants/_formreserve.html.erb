@@ -1,13 +1,27 @@
+<% if current_user %>
 <h1>Make a reservation!</h1>
 
 <%= form_for([@restaurant, @reservation]) do |f| %>
 		<% if @reservation.errors.any? %>
-			<h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this reservation from being saved </h2> 
+			<div id="error_explanation">
+				<h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this reservation from being saved </h2> 
+				<ul>
+				<% @reservation.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+				</ul>
+			</div>
 		<% end %>
 
-		<%= f.datetime_select :time, class: "form_fields" %><br>
-		<%= f.number_field :party_size, placeholder: "Party size", class: "form_fields" %><br>
-		<%= f.submit class: "form_fields" %>
+		<div class="field">
+			<%= f.datetime_select :time, class: "form_fields" %><br>
+		</div>
+		<div class="field">
+			<%= f.number_field :party_size, placeholder: "Party size", class: "form_fields" %><br>
+		</div>
+		<div class="actions">
+			<%= f.submit class: "form_fields" %>
+		</div>
 	<% end %>
 
 	<% if @reservation %>
@@ -18,3 +32,7 @@
 			</p>
 		<% end %>
 	<% end %>
+<% end %>
+<% unless current_user %>
+  <p>Please <%= link_to "log in", new_session_path %> to make a reservation.</p> 
+<% end %>
