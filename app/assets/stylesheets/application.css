@@ -26,6 +26,12 @@ body {
 	text-align: center;
 }
 
+.things {
+	display: inline-block;
+	text-align: left;
+
+}
+
 .field {
 	font-size: 14px;
 

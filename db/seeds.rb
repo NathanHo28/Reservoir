@@ -9,8 +9,8 @@
 #this is the test user
 User.create!(
 	:name => "Test",
-	:email => 'test@gmail.com'
-	:password => "test"
+	:email => 'test@gmail.com',
+	:password => "test",
 	:password_confirmation => "test"
 
 	)
