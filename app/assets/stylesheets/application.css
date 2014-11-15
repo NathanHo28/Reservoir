@@ -20,6 +20,17 @@ header {
 	font-size: 40px;
 }
 
+header a:link {
+    text-decoration: none;
+}
+
+header a:visited {
+	text-decoration: none;
+    color: #000000;
+}
+
+
+
 body {
 	background-color: #FFFFFA;
 	font-family: Georgia;
