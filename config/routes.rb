@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   root 'sessions#new'
 
-  resources :restaurants, only: [:show, :index]
-  resources :reservations, only: [:show, :create, :edit, :destroy]
+  resources :restaurants, only: [:show, :index] do
+    resources :reservations, only: [:show, :create, :edit, :destroy] 
+  end
 
   resources :users, only: [:new, :create]
   resources :sessions, only: [:new, :create, :destroy]
