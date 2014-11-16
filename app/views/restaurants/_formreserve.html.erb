@@ -19,6 +19,9 @@
 		<div class="field">
 			<%= f.number_field :party_size, placeholder: "Party size", class: "form_fields" %><br>
 		</div>
+		<div>
+			<%= f.hidden_field :name, :value => @restaurant.name %>
+		</div>
 		<div class="actions">
 			<%= f.submit class: "form_fields" %>
 		</div>
