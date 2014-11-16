@@ -1,0 +1,8 @@
+<h3><strong><%= @user.name %></strong></h3>
+
+<p><%= @user.name %>, <%= @user.id %></p>
+<p><%= @user.email %></p>
+
+<p><%= Reservation.where(@user).select(:name) %></p>
+
+<%= link_to 'Back', :back %>
