@@ -3,6 +3,17 @@
 <p><%= @user.name %>, <%= @user.id %></p>
 <p><%= @user.email %></p>
 
-<p><%= Reservation.where(@user).select(:name) %></p>
+<h2>Reservations</h2>
+
+<% @user.reservations.each do |reservation| %>
+	<div>
+		<p>Restaurant: <%= reservation.restaurant.name %></p>
+		<p>Date: <%= reservation.time %></p>
+		<p>Party Size: <%= reservation.party_size %></p>
+	</div>
+	<div>
+		<%= link_to "View Restaurant", restaurant_path(reservation.restaurant)  %>
+	</div>
+<% end %>
 
 <%= link_to 'Back', :back %>
