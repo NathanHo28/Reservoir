@@ -21,7 +21,7 @@ function toggle() {
 <!-- i have the same text on 2 pages :( this is sad -->
 <div>
 	<% @restaurants.each do |restaurant| %>
-	  	<h4><strong><%= restaurant.name %></strong></h4>
+	  	<h4 class="restname"><strong><%= link_to restaurant.name, restaurant_path(restaurant) %></strong></h4>
 	  	<ul>
 	  		<li>Located @ <%= restaurant.location%></li>
 		  	<li>Contact: <%= restaurant.email %></li>

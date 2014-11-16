@@ -22,16 +22,17 @@
       <% end %>
     </p>
 
-	<% if flash[:notice] %>
-      <p id="notice"><%= flash[:notice] %></p>
-    <% end %>
-    <% if flash[:alert] %>
-      <p id="alert"><%= flash[:alert] %></p>
-    <% end %>
+	  <% if flash[:notice] %>
+    	<p id="notice"><%= flash[:notice] %></p>
+      <% end %>
+      <% if flash[:alert] %>
+     	<p id="alert"><%= flash[:alert] %></p>
+      <% end %>
 	<div class="things">
-	<%= yield %>
-  </div>
+	  <%= yield %>
+    </div>
 
+    <footer>&copy; Bitmaker Boizzz</footer>
 
 </body>
 </html>
