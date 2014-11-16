@@ -24,7 +24,7 @@ Restaurant.create!(
 	)
 
 Restaurant.create!(
-	:name => "Spoon & Fork",
+	:name => "Spoon and Fork",
 	:email => "spoonandfork@gmail.com",
 	:capacity => 150,
 	:menu => "Pad Thai, Thai Green Curry , Rainbow Roll, Edamame, Spicy Hamachi Nigiri Sushi, Thai Dumplings, Miso Soup",
@@ -35,7 +35,7 @@ Restaurant.create!(
 	:name => "Scaramouche",
 	:email => "scaramouche@gmail.com",
 	:capacity => 250,
-	:menu => "Venisoncoconut Cream Pie, Pasta Bar, Oysters, Fois Gras and Partridge, Steak, Creme Brulee, Poached Lobster, Steak Tartare, Smoked Salmon",
+	:menu => "Coconut Cream Pie, Pasta Bar, Oysters, Fois Gras and Partridge, Steak, Creme Brulee, Poached Lobster, Steak Tartare, Smoked Salmon",
 	:location => "1 Benvenuto Pl",
 	)
 
