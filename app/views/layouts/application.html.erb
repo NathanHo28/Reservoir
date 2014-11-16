@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
 </head>
 
 <header>
@@ -14,6 +15,7 @@
 </header>
 
 <body>
+
 	<p class="userinfo">
       <% if current_user %>
         Signed in as <%= link_to current_user.name, current_user %>. <%= link_to "Log out", session_path("current"), :method => :delete %>

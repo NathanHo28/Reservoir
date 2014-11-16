@@ -2,32 +2,33 @@
 
 <!-- JAVASCRIPT MAGIC AGAIN FOR THE TOGGLING -->
 
-<script language="javascript"> 
-function toggle() {
-	var ele = document.getElementById("toggleText");
-	var text = document.getElementById("displayText");
-	if(ele.style.display == "block") {
-    		ele.style.display = "none";
-		text.innerHTML = "show";
-  	}
-	else {
-		ele.style.display = "block";
-		text.innerHTML = "hide";
-	}
-} 
+<script type="text/javascript">
+<!--
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+//-->
 </script>
 
 <!-- IS THERE A WAY TO DO THIS MORE ELEGANTLY -->
 <!-- i have the same text on 2 pages :( this is sad -->
 <div>
 	<% @restaurants.each do |restaurant| %>
+	<div id="<%=restaurant.name%>">
 	  	<h4 class="restname"><strong><%= link_to restaurant.name, restaurant_path(restaurant) %></strong></h4>
 	  	<ul>
 	  		<li>Located @ <%= restaurant.location%></li>
 		  	<li>Contact: <%= restaurant.email %></li>
 		  	<li>Capacity: <%= restaurant.capacity %></li>
-		  	<li><a id="displayText" href="javascript:toggle();">Click here to view menu preview</a>
-			<div id="toggleText" style="display: none"><ul>
+		  	<li><a href="#<%=restaurant.name%>" onclick="toggle_visibility('menu_<%=restaurant.name%>');">Click here to view the menu!</a>
+
+
+
+			<div id="menu_<%=restaurant.name%>" style="display: none"><ul>
 				<% restaurant.menu.split(", ").each do |item| %>
 				<li><%= item %></li>
 				<% end %>
@@ -36,5 +37,6 @@ function toggle() {
 			</li>
 	  	</ul>
 	  	<p><%= link_to "View Restaurant",restaurant_path(restaurant) %></p>
+	</div>
 	<% end %>
 </div>
