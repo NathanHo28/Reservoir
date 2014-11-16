@@ -14,7 +14,7 @@
 		<% end %>
 
 		<div class="field">
-			<%= f.datetime_select :time, class: "form_fields" %><br>
+			<%= f.datetime_select :time, ampm: true, default: 1.days.from_now, discard_minute: true, class: "form_fields" %><br>
 		</div>
 		<div class="field">
 			<%= f.number_field :party_size, placeholder: "Party size", class: "form_fields" %><br>
@@ -25,15 +25,6 @@
 		<div class="actions">
 			<%= f.submit class: "form_fields" %>
 		</div>
-	<% end %>
-
-	<% if @reservation %>
-		<% @restaurant.reservations.each do |reservation| %>
-			<p>
-				<%= reservation.time %><br>
-				<%= reservation.party_size %>
-			</p>
-		<% end %>
 	<% end %>
 <% end %>
 <% unless current_user %>
