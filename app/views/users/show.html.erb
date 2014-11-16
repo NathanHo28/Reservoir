@@ -8,7 +8,7 @@
 <% @user.reservations.each do |reservation| %>
 	<div>
 		<p>Restaurant: <%= reservation.restaurant.name %></p>
-		<p>Date: <%= reservation.time %></p>
+		<p>Date: <%= reservation.time.strftime('%A, %d %b %Y @ %l:%M %p') %></p>
 		<p>Party Size: <%= reservation.party_size %></p>
 	</div>
 	<div>
