@@ -24,9 +24,15 @@ function toggle() {
 
 	  		<li>Located @ <%= @restaurant.location%></li>
 		  	<li>Contact: <%= @restaurant.email %></li>
-		  	<li>capacity<%= @restaurant.capacity %></li>
+		  	<li>Capacity: <%= @restaurant.capacity %></li>
 		  	<li><a id="displayText" href="javascript:toggle();">Click here to view menu preview</a>
-			<div id="toggleText" style="display: none"><%= @restaurant.menu %></div></li>
+			<div id="toggleText" style="display: none"><ul>
+				<% @restaurant.menu.split(", ").each do |item| %>
+				<li><%= item %></li>
+				<% end %>
+				</ul>
+				</div>
+			</li>
 	  	</ul>
 	  <p><%= link_to "Back to Restaurants",restaurants_url%></p>
 </div>
