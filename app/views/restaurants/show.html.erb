@@ -37,5 +37,5 @@ function toggle() {
 	  <p><%= link_to "Back to Restaurants",restaurants_url%></p>
 </div>
 
-<%= render 'formreserve' %>
+<%= render 'restaurants/formreserve', locals: { restaurant: @restaurant, reservation: @reservation } %>
 	  	
